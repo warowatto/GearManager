@@ -12,6 +12,7 @@ import android.text.TextWatcher;
 import android.widget.Toast;
 
 import com.google.common.base.Strings;
+import com.google.common.primitives.Chars;
 import com.shinheung.gearmanager.Data.Gear;
 import com.shinheung.gearmanager.MVP.GearCalEditContract;
 import com.shinheung.gearmanager.R;
@@ -47,7 +48,7 @@ public class CalcuratorEditActivity extends AppCompatActivity
 
         binding.setHandler(this);
         binding.setIsDegree(objIsDegree);
-
+        binding.setPrintDegree(objDegree);
     }
 
     @Override
@@ -94,9 +95,7 @@ public class CalcuratorEditActivity extends AppCompatActivity
     public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
         if (Strings.isNullOrEmpty(charSequence.toString())) return;
         String text = charSequence.toString();
-        boolean isDegree = Observable.fromArray(text.toCharArray()).filter(chars -> chars.equals('.')).count().blockingGet() < 2;
-        System.out.println(Observable.fromArray(text.toCharArray()).filter(chars ->  chars.equals('.')).count().blockingGet());
-        System.out.println(isDegree);
+        boolean isDegree = Observable.fromIterable(Chars.asList(text.toCharArray())).filter(character -> character == '.').count().blockingGet() < 2;
         String printText = isDegree ? Converter.degreeToTime(Double.valueOf(text)) : String.valueOf(Converter.timeToDegree(text));
 
         objIsDegree.set(isDegree);

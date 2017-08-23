@@ -1,5 +1,7 @@
 package com.shinheung.gearmanager.Util.String;
 
+import com.google.common.base.Strings;
+
 /**
  * Created by yongheekim on 2017. 8. 18..
  */
@@ -22,6 +24,9 @@ public class Converter {
         double degree = 0d;
         double rate = 1d;
         for (String value : slice) {
+            boolean hasText = Strings.isNullOrEmpty(value);
+            if (hasText) break;
+
             degree += Double.valueOf(value) / rate;
             rate *= 60;
         }

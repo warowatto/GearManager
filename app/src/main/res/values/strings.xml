@@ -1,4 +1,8 @@
 <resources>
+    <string name="dropbox_app_key">okvonvhdmwifmb3</string>
+    <string name="dropbox_app_secrit_key">jfa11ud0i04kudf</string>
+    <string name="dropbox_access_token">wYgX3T8lVvMAAAAAAAABUodl_OENtOxkuuLWierrzH__8_Nn4-KDhhxCn1X2dRfg</string>
+
     <string name="app_name">GearManager</string>
     <string name="toolSize">공구크기</string>
     <string name="teeth">잇수</string>

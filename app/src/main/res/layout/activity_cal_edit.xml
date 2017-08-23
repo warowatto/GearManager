@@ -8,15 +8,13 @@
 
         <import type="android.databinding.ObservableField" />
 
-        <import type="android.databinding.ObservableBoolean" />
-
         <variable
             name="printDegree"
             type="ObservableField&lt;String&gt;" />
 
         <variable
             name="isDegree"
-            type="ObservableBoolean" />
+            type="android.databinding.ObservableBoolean" />
 
         <variable
             name="handler"
@@ -82,13 +80,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="16dp"
-                    tools:text="도분초 =>"/>
+                    tools:text="도분초 =>" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@{printDegree.get()}"/>
+                    android:text="@{printDegree}"/>
 
             </LinearLayout>
 
