@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">GearManager</string>
+    <string name="toolSize">공구크기</string>
+    <string name="teeth">잇수</string>
+    <string name="torision">비틀림각</string>
+    <string name="addTeeth">전위계수</string>
+    <string name="sm">걸치기</string>
+    <string name="caldetail_label">기어 상세정보</string>
+    <string name="edit_label">기어계산</string>
+
+    <string-array name="pressAngle">
+        <item>20</item>
+        <item>14.5</item>
+        <item>25</item>
+        <item>30</item>
+    </string-array>
+
+    <string-array name="format">
+        <item>0.000</item>
+        <item>0.0000</item>
+        <item>0.00000</item>
+        <item>0.000000</item>
+        <item>0.0000000</item>
+    </string-array>
 </resources>

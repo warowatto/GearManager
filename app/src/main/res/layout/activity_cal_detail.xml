@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.databinding.ObservableMap" />
+
+        <variable
+            name="gear"
+            type="com.shinheung.gearmanager.Data.Gear" />
+
+        <variable
+            name="options"
+            type="ObservableMap&lt;String, Integer&gt;" />
+
+        <variable
+            name="handler"
+            type="com.shinheung.gearmanager.MVP.GearCalDetailContract.Presenter" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="32dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:text="@{handler.gearName}"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="30sp"
+                tools:text="M10 X 20T" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="@string/sm"
+                android:textSize="22dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="24dp"
+                    android:text='@{String.format("%dT", options["zm"])}'
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:textSize="26dp"
+                    tools:text="20T" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="24dp"
+                    android:text="=>" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text='@{handler.getSM(options["zm"], options["format"])}'
+                    android:textSize="24dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/holo_red_dark"
+                    android:enabled='@{1 != options["zm"]}'
+                    android:onClick="@{v -> handler.changeZm(false)}"
+                    android:text="-"
+                    android:textColor="@android:color/white"
+                    android:textSize="26dp" />
+
+                <EditText
+                    android:id="@+id/editZm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:text='@{String.valueOf(options["zm"])}'
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="16dp"
+                    tools:text="20T" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/holo_green_dark"
+                    android:enabled='@{gear.teeth != options["zm"]}'
+                    android:onClick="@{v -> handler.changeZm(true)}"
+                    android:text="+"
+                    android:textColor="@android:color/white"
+                    android:textSize="26dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</layout>

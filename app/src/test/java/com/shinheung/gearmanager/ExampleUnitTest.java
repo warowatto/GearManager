@@ -2,8 +2,6 @@ package com.shinheung.gearmanager;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 /**
  * Example local unit test, which will execute on the development machine (host).
  *
@@ -12,6 +10,9 @@ import static org.junit.Assert.*;
 public class ExampleUnitTest {
     @Test
     public void addition_isCorrect() throws Exception {
-        assertEquals(4, 2 + 2);
+
+        String string = "24.50.07";
+
+        System.out.println(string.split("\\.").length - 1);
     }
 }

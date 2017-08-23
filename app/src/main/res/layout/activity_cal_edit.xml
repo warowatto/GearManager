@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Activities.CalcuratorEditActivity">
+
+    <data>
+
+        <import type="android.databinding.ObservableField" />
+
+        <import type="android.databinding.ObservableBoolean" />
+
+        <variable
+            name="printDegree"
+            type="ObservableField&lt;String&gt;" />
+
+        <variable
+            name="isDegree"
+            type="ObservableBoolean" />
+
+        <variable
+            name="handler"
+            type="com.shinheung.gearmanager.MVP.GearCalEditContract.Presenter" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/editModule"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/toolSize"
+                android:inputType="numberDecimal"
+                android:text="4" />
+
+            <CheckBox
+                android:id="@+id/checkDp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DP" />
+
+            <CheckBox
+                android:id="@+id/checkLowTeeth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="저치" />
+
+            <EditText
+                android:id="@+id/editTeeth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="0123456789"
+                android:hint="@string/teeth"
+                android:inputType="number"
+                android:text="19" />
+
+            <Spinner
+                android:id="@+id/spinnerPressAngle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/pressAngle"></Spinner>
+
+            <EditText
+                android:id="@+id/editTorisionAngle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="0123456789."
+                android:hint="@string/torision"
+                android:inputType="numberDecimal"
+                android:text="26.7" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    tools:text="도분초 =>"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@{printDegree.get()}"/>
+
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/editAddTeeth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="0123456789+-."
+                android:hint="@string/addTeeth"
+                android:inputType="numberDecimal" />
+        </LinearLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="16dp"
+            android:onClick="@{v -> handler.gearGanerator()}" />
+    </FrameLayout>
+</layout>

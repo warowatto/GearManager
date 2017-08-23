@@ -9,12 +9,32 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".Activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity android:name=".Activities.StockListActivity">
+
+        </activity>
+
+        <activity
+            android:name=".Activities.CalcuratorDetailActivity"
+            android:label="@string/caldetail_label"
+            android:parentActivityName=".Activities.CalcuratorEditActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity
+            android:name=".Activities.CalcuratorEditActivity"
+            android:label="@string/edit_label"
+            android:parentActivityName=".Activities.MainActivity"
+            android:screenOrientation="portrait">
+
         </activity>
     </application>
 

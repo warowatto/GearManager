@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:title="0.000" android:id="@+id/menu_format1"></item>
+    <item android:title="0.0000" android:id="@+id/menu_format2"></item>
+    <item android:title="0.00000" android:id="@+id/menu_format3"></item>
+    <item android:title="0.000000" android:id="@+id/menu_format4"></item>
+    <item android:title="0.0000000" android:id="@+id/menu_format5"></item>
+</menu>
