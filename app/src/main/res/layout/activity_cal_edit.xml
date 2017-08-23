@@ -37,8 +37,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/toolSize"
-                android:inputType="numberDecimal"
-                android:text="4" />
+                android:inputType="numberDecimal" />
 
             <CheckBox
                 android:id="@+id/checkDp"
@@ -58,8 +57,7 @@
                 android:layout_height="wrap_content"
                 android:digits="0123456789"
                 android:hint="@string/teeth"
-                android:inputType="number"
-                android:text="19" />
+                android:inputType="number" />
 
             <Spinner
                 android:id="@+id/spinnerPressAngle"
@@ -73,8 +71,7 @@
                 android:layout_height="wrap_content"
                 android:digits="0123456789."
                 android:hint="@string/torision"
-                android:inputType="numberDecimal"
-                android:text="26.7" />
+                android:inputType="numberDecimal" />
 
             <LinearLayout
                 android:layout_width="match_parent"

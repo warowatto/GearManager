@@ -15,6 +15,13 @@
     <string name="dialog_message_delete">%s (을)를 삭제하시겠습니까?</string>
     <string name="dialog_button_delete">삭제</string>
     <string name="dialog_button_cancel">닫기</string>
+    <string name="txt_pressAngle">압력각</string>
+    <string name="txt_torisionAngle">비틀림각</string>
+    <string name="activity_label_stock_detail">재고 상세보기</string>
+    <string name="activity_label_stock_add">재고 추가</string>
+    <string name="activity_label_stock_list">재고현황</string>
+    <string name="empty_list_export">출고현황이 없습니다</string>
+    <string name="activity_label_export_list">출고현황</string>
 
     <string-array name="pressAngle">
         <item>20</item>

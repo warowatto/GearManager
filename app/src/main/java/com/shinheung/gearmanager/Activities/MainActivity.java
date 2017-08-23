@@ -15,6 +15,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    public void stock(View view) {
+        Intent intent = new Intent(this, StockListActivity.class);
+        startActivity(intent);
+    }
+
     public void calcurator(View view) {
         Intent intent = new Intent(this, CalcuratorEditActivity.class);
         startActivity(intent);

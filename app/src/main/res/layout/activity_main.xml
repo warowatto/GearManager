@@ -10,7 +10,12 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="계산기"
+        android:text="계산기"
         android:onClick="calcurator"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="재고관리"
+        android:onClick="stock"/>
 </LinearLayout>

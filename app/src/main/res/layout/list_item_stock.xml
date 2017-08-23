@@ -51,8 +51,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentEnd="true"
-                android:textSize="16dp"
-                tools:text="날짜" />
+                android:textSize="16dp" />
 
             <TextView
                 android:id="@+id/textView3"
@@ -73,8 +72,9 @@
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/textView"
                 android:layout_toStartOf="@+id/textView3"
-                android:text='@{stock.companyName}'
                 tools:text="업체명" />
+
+            <!--android:text='@{stock.companyName}'-->
 
             <ImageButton
                 android:id="@+id/imageButton"

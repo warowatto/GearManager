@@ -11,10 +11,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Activities.MainActivity">
-
-        </activity>
-
-        <activity android:name=".Activities.StockListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,13 +18,29 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Activities.StockAddActivity">
+        <activity
+            android:name=".Activities.StockListActivity"
+            android:label="@string/activity_label_stock_list"
+            android:screenOrientation="portrait">
 
         </activity>
 
-        <activity android:name=".Activities.StockDetailActivity">
+        <activity
+            android:name=".Activities.StockAddActivity"
+            android:label="@string/activity_label_stock_add"
+            android:screenOrientation="portrait">
 
         </activity>
+
+        <activity
+            android:name=".Activities.StockDetailActivity"
+            android:label="@string/activity_label_stock_detail"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity android:name=".Activities.ExportListActivity"
+            android:label="@string/activity_label_export_list"></activity>
 
         <activity
             android:name=".Activities.CalcuratorDetailActivity"

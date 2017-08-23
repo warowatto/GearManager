@@ -11,7 +11,6 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.Toast;
 
-import com.google.common.base.Preconditions;
 import com.google.common.base.Strings;
 import com.shinheung.gearmanager.Data.Gear;
 import com.shinheung.gearmanager.MVP.GearCalEditContract;
