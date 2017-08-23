@@ -1,19 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <FrameLayout
+    <data>
+
+        <variable
+            name="handler"
+            type="com.shinheung.gearmanager.Adapter.StockListAdapter.Handler" />
+
+        <variable
+            name="adapter"
+            type="com.shinheung.gearmanager.Adapter.StockListAdapter" />
+
+        <variable
+            name="stock"
+            type="com.shinheung.gearmanager.Data.Stock" />
+    </data>
+
+    <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="4dp"
+        android:onClick='@{v -> handler.warpDetailPage(stock)}'
+        app:cardCornerRadius="4dp">
 
-        <TextView
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:text="asdfasdf"/>
+            android:layout_height="80dp"
+            android:padding="8dp">
 
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:text="asdfasdf"/>
-    </FrameLayout>
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_toStartOf="@+id/textView3"
+                android:text='@{stock.note}'
+                android:textSize="18dp"
+                tools:text="제품명"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:textSize="16dp"
+                tools:text="날짜" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="20dp"
+                android:layout_toStartOf="@+id/imageButton"
+                android:text='@{String.format("%s EA", stock.productCount)}'
+                android:textColor="@android:color/holo_orange_dark"
+                android:textSize="24dp"
+                tools:text="10 EA" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView"
+                android:layout_toStartOf="@+id/textView3"
+                android:text='@{stock.companyName}'
+                tools:text="업체명" />
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:background="?android:attr/selectableItemBackground"
+                app:srcCompat="@android:drawable/ic_delete"
+                android:onClick='@{v -> handler.deleteItem(adapter, stock)}'/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
 </layout>

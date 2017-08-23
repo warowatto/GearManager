@@ -7,6 +7,14 @@
     <string name="sm">걸치기</string>
     <string name="caldetail_label">기어 상세정보</string>
     <string name="edit_label">기어계산</string>
+    <string name="hint_company_name">업체명</string>
+    <string name="hint_product_name">제품명</string>
+    <string name="hint_count">수량</string>
+    <string name="error_stock">입력이 누락된 부분이 있는지 확인해 주십시오</string>
+    <string name="dialog_title_delete">삭제</string>
+    <string name="dialog_message_delete">%s (을)를 삭제하시겠습니까?</string>
+    <string name="dialog_button_delete">삭제</string>
+    <string name="dialog_button_cancel">닫기</string>
 
     <string-array name="pressAngle">
         <item>20</item>

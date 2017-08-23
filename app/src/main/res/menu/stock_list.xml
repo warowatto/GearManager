@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="업체 이름" android:id="@+id/menu_sort_company_asc" />
+    <item android:title="업체 이름 역순" android:id="@+id/menu_sort_company_desc" />
+    <item android:title="최근일로 부터" android:id="@+id/menu_sort_date_asc" />
+    <item android:title="날짜 정렬" android:id="@+id/menu_sort_date_desc" />
+</menu>
